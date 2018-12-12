@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <title>ATM Pseudocode</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1>ATM</h1>
+                <h2>Variables</h2>
+                <ul>
+                    <li>SET pin equal to zero</li>
+                    <li>SET amount queal to zero</li>
+                    <li>SET card equal to zero</li>
+                    <li>SET accountType equal to checking</li>
+                    <li>SET pinNumber equal to 1</li>
+                    <li>SET withdrawl equal to zero</li>
+                </ul>
+                <ul>
+                    <li>DISPLAY 'Enter your card</li>
+                    <li>INPUT card</li>
+                    <li>DISPLAY pin</li>
+                    <li>INPUT pin</li>
+                    <li>DISPLAY 'how much would you like to withdrawl?'</li>
+                    <li>INPUT amount</li>
+                    <li>IF balance is ok</li>
+                    <li>DISPLAY 'despensing funds. have a nice day'</li>
+                    <li>ELSE</li>
+                    <li>DISPLAY 'you have insufficient funds'</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <h2>MODULES</h2>
+                <h3>MODULE checkBalance ACCEPTS card number, amount</h3>
+                <ul>
+                    <li>SET balance equal to zero</li>
+                    <li>SET balance equal to CALL getUserAccount PASS card number</li>
+                    <li>IF  balance is greater than amount</li>
+                    <li>RETURN true</li>
+                    <li>ELSE</li>
+                    <li>RETURN false</li>
+                </ul>
+                <h3>MODULE getUserAccount ACCEPTS card number</h3>
+                <ul>
+                    <li>SET balance equal to zero</li>
+                    <li>LOOP user accounts</li>
+                    <li>IF user card number is equal to card number</li>
+                    <li>ELSE</li>
+                    <li>RETURN balance</li>
+                </ul>
+                <h3>MODULE balanceAmount</h3>
+                <ul>
+                    <li>SET balanceAmount equal to zero</li>
+                    <li>DISPLAY 'Would you like to check your Account Balance'</li>
+                    <li>IF yes DISPLAY checkingAmount </li>
+                    <li>ELSE DISPLAY '</li>
+                </ul>
+                <h3>PIN</h3>
+                <ul>
+                    <li>IF pinNumber equal to THREE</li>
+                    <li>GO TO EXIT//EAT THE CARD</li>
+                    <li>DISPLAY 'Enter your PIN code.'</li>
+                    <li>INPUT pin</li>
+                    <li>IF pinNumber ACCEPTS countinue to withdrawl</li>
+                    <li>ELSE pinNumber DECLINES go back to DISPLAY </li>
+                </ul>
+                <h3>WIDTHDRAWL</h3>
+                <ul>
+                    <li>DISPLAY 'Maximum withdrawl 500$'</li>
+                    <li>IF withdrawl > 500$</li>
+                    <li>DISPLAY error</li>
+                    <li>DISPLAY 'Maximum withdrawl 500$'</li>
+                    <li>ELSE </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        var pin = 0;
+        var amount = 0;
+        var card = 0;
+        
+    </script>
+</body>
+</html>

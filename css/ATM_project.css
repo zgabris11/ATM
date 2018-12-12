@@ -1,0 +1,166 @@
+body {
+    background-color: #004BA8;
+    border: solid darkblue 100px;
+    border-right:  solid rgb(56, 56, 240) 100px;
+    border-left: solid rgb(56, 56, 240) 100px;
+}
+h1 {
+    text-align: center;
+}
+.buttonsLeft {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin-top: 100px;
+}
+.buttonsRight{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin-top: 100px;
+}
+.button {
+    width: 50px;
+    height: 50px;
+    margin-top: 40px;
+    margin-right: 30px;
+    margin-left: 30px;
+    background-color: #4A525A;
+    border-radius: 10px;
+}
+.atmDisplay {
+    background-color: #3E78B2;
+}
+.atmScreen {
+    height: 400px;
+    border: solid black 8px;
+    border-left: solid darkgray;
+    border-right: solid darkgray; 
+    width: 700px;
+    background-color: #4A525A;
+    margin-right: 50px;
+    margin-top: 20px;
+}
+.keyPad {
+    margin-top: 50px;
+    background-color: #3E78B2;
+}
+.bottomDisplay {
+    background-color: #3E78B2;
+    transform: perspective(20px) rotateX(1deg);
+    width: 1295px;
+    margin-top: -12px;
+} 
+#display2{
+    text-align: center;
+    font-size: 25px;
+    position: relative;
+    top: 25px;
+}
+#depositNumber{
+    display: none;
+}
+#checkingAccount{
+    display: none;
+}
+#savingAccount{
+    display: none;
+}
+#twenty {
+    position: relative;
+    top: -24px;
+    margin-left: 10px;
+    font-size: 20px;
+    display:none;
+}
+#forty {
+    position: relative;
+    top: -7px;
+    margin-left: 10px;
+    margin-top: 50px;
+    font-size: 20px;
+    display: none;
+}
+#sixty {
+    position: relative;
+    top: 5px;
+    margin-left: 10px;
+    margin-top: 50px;
+    font-size: 20px;
+    display: none;
+}
+#eighty {
+    position: relative;
+    top: -205px;
+    margin-left: 640px;
+    font-size: 20px;
+    display: none;
+}
+#display{
+    font-size: 25px;
+    text-align: center;
+}
+#cardNumber{
+    margin-left: 260px;
+}
+#pinText{
+    text-align: center;
+    margin-left: 260px;
+}
+#errorPin {
+    display:none;
+}
+#pinNumber{
+    margin-left: 260px;
+    display: none;
+}
+#fastCash {
+    font-size: 20px;
+    display: none;
+    margin-top: 60px;
+}
+#deposit {
+    font-size: 20px;
+    display: none;
+    margin-top: 70px;
+}
+#checkAccount{
+    font-size: 20px;
+    margin-top: 60px;
+    display: none;
+}
+.key {
+    width:calc(100%/3 - 10px);
+    height: 35px;
+    margin-top: 5px;
+    margin-right: 2px;
+    margin-bottom: 5px;
+    transform: skewX(2deg);
+    background-color: white;
+    border-radius: 10px;
+}
+.enterPad {
+    width: calc(100%/1 - 5px);
+    height: 50px;
+    margin-top: 5px;
+    border-radius: 10px;
+    background-color: white;
+}
+.enterCard {
+    height: 15px;
+    border: solid #24272B 5px;
+    margin-top: 50px;
+    background-color: #4A525A;
+}
+.enterCard p {
+    margin-top: 20px;
+}
+.getMoney {
+    height: 15px;
+    border: solid #24272B 5px;
+    margin-top: 50px;
+    background-color: #4A525A;
+}
+.getMoney p {
+    margin-top: 20px;
+}

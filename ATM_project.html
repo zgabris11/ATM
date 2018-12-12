@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/ATM_project.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1>BANK OF GABRIS</h1>
+            </div>
+        </div>   
+    </div>
+    <div class="container atmDisplay">
+        <div class="row">
+            <div class="col-sm-2">
+                <div class="buttonsLeft">
+                    <button onclick="fastCashFunction(); twentyFunction(); " id="buttonOne" class="button button1">...</button>
+                    <button onclick="depositFunction(); fortyFunction();" id="buttonTwo" class="button button2">...</button>
+                    <button onclick="checkAccountFunction(); sixtyFunction();" id="buttonThree" class="button button3">...</button>
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <div class="atmScreen">
+                    <div class="output">
+                        <p id="display">Enter your card number.</p>
+                        <p id="display2"></p>
+                        <span id="pinText"></span><br>
+                        <span id="errorPin"></span>
+                        
+
+                        <input id="cardNumber">
+                        <input id="pinNumber">
+
+                        
+
+                        <span id="fastCash">Fast Cash</span><br>
+                        <span id="deposit">Deposit Money</span><br>
+                        <span id="checkAccount">Check Account Balance</span>
+
+                        <span id="twenty">20$</span><br>
+                        <span id="forty">40$</span><br>
+                        <span id="sixty">60$</span><br>
+                        <span id="eighty">80$</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="buttonsRight">
+                    <button onclick= "eightyFunction();"class="button button4">...</button>
+                    <button onclick= ""class="button button5">...</button>
+                    <button onclick= ""class="button button6">...</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container bottomDisplay">
+        <div class="row">
+            <div class="keyPad col-sm-5">
+                <div class="row">
+                    <div class="col-sm-8">
+                        <button onclick="cardPad(this);" value="1" class="key">1</button>
+                        <button onclick="cardPad(this);" value="2" class="key">2</button>
+                        <button onclick="cardPad(this);" value="3" class="key">3</button>
+                        <button onclick="cardPad(this);" value="4" class="key">4</button>
+                        <button onclick="cardPad(this);" value="5" class="key">5</button>
+                        <button onclick="cardPad(this);" value="6" class="key">6</button>
+                        <button onclick="cardPad(this);" value="7" class="key">7</button>
+                        <button onclick="cardPad(this);" value="8" class="key">8</button>
+                        <button onclick="cardPad(this);" value="9" class="key">9</button>
+                        <button onclick="cardPad(this);" value="0" class="key">0</button>
+                        <button onclick="cardPad(this);" value="." class="key">.</button>
+                        <button onclick="cardPad(this);" value="00" class="key">00</button>
+                    </div>
+                    <div class="col-sm-4">
+                        <button onclick="checkCardNum(); add(); checkPinNum();" class="enterPad">Enter</button>
+                        <button onclick="mainScreen()"  class="enterPad">Cancel</button>
+                        <button class="enterPad">Exit</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-7">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="enterCard">
+                            <p>Insert Card</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="getMoney">
+                            <p>Receive Cash</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="atm.js"></script>
+     
+</body> 
+</html>
