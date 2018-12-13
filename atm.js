@@ -77,7 +77,13 @@ function eightyFunction() {
 }
 
 function depositFunction() {
-  
+    depositCash = document.getElementById("depositMoney").value;
+    document.getElementById("display2").innerHTML = "You have " + user1.userCheckBalance + " in your account. How much would you like to deposit?";
+    depositMoney.style.display = "inline-block";   
+    fastCash.style.display = "none";
+    checkAccount.style.display = "none";
+    deposit.style.display = "none";
+    display.style.display = "none";
 }
 
 function checkAccountFunction() {

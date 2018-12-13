@@ -51,14 +51,15 @@ h1 {
     width: 1295px;
     margin-top: -12px;
 } 
+#depositMoney{
+    margin-left: 260px;
+    display: none;
+}
 #display2{
     text-align: center;
     font-size: 25px;
     position: relative;
     top: 25px;
-}
-#depositNumber{
-    display: none;
 }
 #checkingAccount{
     display: none;
