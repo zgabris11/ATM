@@ -20,9 +20,9 @@
         <div class="row">
             <div class="col-sm-2">
                 <div class="buttonsLeft">
-                    <button onclick="fastCashFunction(); twentyFunction(); " id="buttonOne" class="button button1">...</button>
-                    <button onclick="depositFunction(); fortyFunction();" id="buttonTwo" class="button button2">...</button>
-                    <button onclick="checkAccountFunction(); sixtyFunction();" id="buttonThree" class="button button3">...</button>
+                    <button id="buttonOne" onclick="fastCashFunction()" id="buttonOne" class="button button1">...</button>
+                    <button id="buttonTwo" onclick="depositFunction()" id="buttonTwo" class="button button2">...</button>
+                    <button id="buttonThree" onclick="checkAccountFunction()" id="buttonThree" class="button button3">...</button>
                 </div>
             </div>
             <div class="col-sm-8">
@@ -80,7 +80,7 @@
                         <button onclick="cardPad(this);" value="00" class="key">00</button>
                     </div>
                     <div class="col-sm-4">
-                        <button onclick="checkCardNum(); add(); checkPinNum(); putInCash();" class="enterPad">Enter</button>
+                        <button onclick="checkCardNum(); add(); checkPinNum();" class="enterPad">Enter</button>
                         <button onclick="mainScreen()"  class="enterPad">Cancel</button>
                         <button class="enterPad">Exit</button>
                     </div>

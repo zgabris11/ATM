@@ -4,7 +4,11 @@ var user1 = {
     pinNum: "1234",
     userName: "Z"
 }
+var buttonOne = document.getElementById("buttonOne");
+var buttonTwo = document.getElementById("buttonTwo");
+var buttonThree = document.getElementById("buttonThree");
 var counter = 0
+var depositMoney = document.getElementById("depositMoney");
 function add() {
    counter++;
 }
@@ -14,7 +18,11 @@ function cardPad(element) {
        
    } else if (counter == 1) {
        document.getElementById("pinNumber").value = document.getElementById("pinNumber").value + element.value;
-   } 
+   } else if (counter == "deposit") {
+       user1.userCheckBalance += document.getElementById("depositMoney").value;
+       console.log("Caught")
+       counter = 1
+   }
 }
 
 function checkCardNum() {
@@ -58,7 +66,7 @@ function fastCashFunction() {
 function twentyFunction() {
    document.getElementById("display3").innerHTML = "Your checking account balance is " + user1.userCheckBalance + " ! Choose an option to widthdraw from your account.";
    user1.userCheckBalance = user1.userCheckBalance - 20;
-   depositMoney.style.display = "none";
+   depositMoney.style.display = "block";
    display.style.display = "none";
 }
 
@@ -84,17 +92,13 @@ function eightyFunction() {
 
 function depositFunction() {
     var depositCash = parseInt(document.getElementById("depositMoney").value);
-    document.getElementById("display2").innerHTML = "You have " + user1.userCheckBalance + " in your account. How much would you like to deposit?";
-    depositMoney.style.display = "inline-block";   
+    document.getElementById("display3").innerHTML = "You have " + user1.userCheckBalance + " in your account. How much would you like to deposit?";  
     fastCash.style.display = "none";
     checkAccount.style.display = "none";
     deposit.style.display = "none";
     display.style.display = "none";
-}
-function putInCash() {
-    if (counter == 3) {
-        var depositCash = parseInt(document.getElementById("depositMoney").value);
-    }
+    depositMoney.style.display = "block";
+    counter = "deposit"
 }
 
 function checkAccountFunction() {
