@@ -56,24 +56,30 @@ function fastCashFunction() {
    deposit.style.display = "none";
 }
 function twentyFunction() {
-   document.getElementById("display").innerHTML = "Your checking account balance is " + user1.userCheckBalance + " ! Choose an option to widthdraw from your account.";
+   document.getElementById("display3").innerHTML = "Your checking account balance is " + user1.userCheckBalance + " ! Choose an option to widthdraw from your account.";
    user1.userCheckBalance = user1.userCheckBalance - 20;
+   depositMoney.style.display = "none";
+   display.style.display = "none";
 }
 
 function fortyFunction() {
-   document.getElementById("display").innerHTML = "Your checking account balance is " + user1.userCheckBalance + " ! Choose an option to widthdraw from your account.";
+   document.getElementById("display3").innerHTML = "Your checking account balance is " + user1.userCheckBalance + " ! Choose an option to widthdraw from your account.";
    user1.userCheckBalance = user1.userCheckBalance - 40;
+   display.style.display = "none";
+   display2.style.display = "none";
+   depositMoney.style.display = "none";
 }
 
 function sixtyFunction() {
-   document.getElementById("display").innerHTML = "Your checking account balance is " + user1.userCheckBalance + " ! Choose an option to widthdraw from your account.";
+   document.getElementById("display3").innerHTML = "Your checking account balance is " + user1.userCheckBalance + " ! Choose an option to widthdraw from your account.";
    user1.userCheckBalance = user1.userCheckBalance - 60;
-
+   display.style.display = "none";
 }
 
 function eightyFunction() {
-   document.getElementById("display").innerHTML = "Your checking account balance is " + user1.userCheckBalance + " ! Choose an option to widthdraw from your account.";
+   document.getElementById("display3").innerHTML = "Your checking account balance is " + user1.userCheckBalance + " ! Choose an option to widthdraw from your account.";
    user1.userCheckBalance = user1.userCheckBalance - 80;
+   display.style.display = "none";
 }
 
 function depositFunction() {

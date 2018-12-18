@@ -61,6 +61,12 @@ h1 {
     position: relative;
     top: 25px;
 }
+#display3{
+    text-align: center;
+    font-size: 25px;
+    position: relative;
+    top: 10px;
+}
 #checkingAccount{
     display: none;
 }

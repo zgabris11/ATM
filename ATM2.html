@@ -15,34 +15,24 @@
                 <h2>Variables</h2>
                 <ul>
                     <li>SET userCheckBalance equal to 500.0</li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li>SET cardNum equal to 123456</li>
+                    <li>SET pinNum equal to 1234</li>
+                    <li>SET userName equal to "z"</li>
                 </ul>
                 <h2>MODULES</h2>
-                    
-                    <h3></h3>
-                    <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
                     <h3>Card Number</h3>
                     <ul>
                         <li>cardNumber</li>
                         <li>DISPLAY 'Enter card number'</li>
                         <li>INPUT card number</li>
                         <li>IF card number equal to cardNumber</li>
-                        <li>DISPLAY numPad</li>
+                        <li>DISPLAY pinNumber</li>
                         <li>ELSE</li>
                         <li>DISPLAY 'Error: that card number is not valid'</li>
-                        <li>LOOP back to cardNumber</li>
                     </ul>
                     <h3>Number pad</h3>
                     <ul>
-                        <li>DISPLAY 'Enter Pin Number</li>
+                        <li>DISPLAY 'Welcome back user. Enter Pin Number'</li>
                         <li>INPUT pin number</li>
                         <li>IF pin number equal to pinNumber</li>
                         <li>DISPLAY checkBalance, makeDeposit, fastCash, exit</li>
@@ -50,11 +40,30 @@
                         <li>DISPLAY 'Error: You have number attempts'</li>
                         <li>COUNTER</li>
                     </ul>
-                    <h3>Check Balance</h3>
+                    <h3>Fast Cash</h3>
                     <ul>
                         <li>DISPLAY accountBalance 'Would you like to widthdraw from your account?'</li>
                         <li>IF yes</li>
                         <li>DISPLAY 'Choose Amount"</li>
+                        <li>DISPLAY '20'</li>
+                        <li>subtract 20 from accountBalance</li>
+                        <li>DISPLAY '40'</li>
+                        <li>subtract 40 from accountBalance</li>
+                        <li>DISPLAY '60'</li>
+                        <li>subratct 40 from accountBalance</li>
+                        <li>DISPLAY '80'</li>
+                        <li>subtract 80 from accountBalance</li>
+                    </ul>
+                    <h3>Deposit</h3>
+                    <ul>
+                        <li>DISPLAY 'You have accountBalance in your account. How much would you like to deposit'</li>
+                        <li>INPUT "amount"</li>
+                        <li>Input the amount of cash</li>
+                        <li>add on amount of cash to accountBalance</li>
+                    </ul>
+                    <h3>Check balance</h3>
+                    <ul>
+                        <li>DISPLAY check account balance</li>
                     </ul>
             </div>
         </div>
