@@ -20,9 +20,9 @@
         <div class="row">
             <div class="col-sm-2">
                 <div class="buttonsLeft">
-                    <button id="buttonOne" onclick="fastCashFunction()" id="buttonOne" class="button button1">...</button>
-                    <button id="buttonTwo" onclick="depositFunction()" id="buttonTwo" class="button button2">...</button>
-                    <button id="buttonThree" onclick="checkAccountFunction()" id="buttonThree" class="button button3">...</button>
+                    <button id="buttonOne" id="buttonOne" class="button button1">...</button>
+                    <button id="buttonTwo" id="buttonTwo" class="button button2">...</button>
+                    <button id="buttonThree" id="buttonThree" class="button button3">...</button>
                 </div>
             </div>
             <div class="col-sm-8">
@@ -54,9 +54,9 @@
             </div>
             <div class="col-sm-2">
                 <div class="buttonsRight">
-                    <button onclick= "eightyFunction();"class="button button4">...</button>
-                    <button onclick= ""class="button button5">...</button>
-                    <button onclick= ""class="button button6">...</button>
+                    <button id="buttonFour" class="button button4">...</button>
+                    <button class="button button5">...</button>
+                    <button class="button button6">...</button>
                 </div>
             </div>
         </div>
@@ -80,8 +80,8 @@
                         <button onclick="cardPad(this);" value="00" class="key">00</button>
                     </div>
                     <div class="col-sm-4">
-                        <button onclick="checkCardNum(); add(); checkPinNum();" class="enterPad">Enter</button>
-                        <button onclick="mainScreen()"  class="enterPad">Cancel</button>
+                        <button onclick="processing('enter')" class="enterPad">Enter</button>
+                        <button onclick="processing('cancel')"  class="enterPad">Cancel</button>
                         <button class="enterPad">Exit</button>
                     </div>
                 </div>

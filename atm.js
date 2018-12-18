@@ -1,5 +1,5 @@
 var user1 = {
-    userCheckBalance: "500.0",
+    userCheckBalance: 500.00,
     cardNum: "123456",
     pinNum: "1234",
     userName: "Z"
@@ -7,15 +7,30 @@ var user1 = {
 var buttonOne = document.getElementById("buttonOne");
 var buttonTwo = document.getElementById("buttonTwo");
 var buttonThree = document.getElementById("buttonThree");
+var buttonFour = document.getElementById("buttonFour");
 var counter = 0
 var depositMoney = document.getElementById("depositMoney");
-function add() {
-   counter++;
+var activeUser = false;
+
+
+function processing(action) {
+    if (counter === 0 && action === "enter") {
+        checkCardNum();
+        counter++
+    } else if (counter === 1 && action === "enter") {
+        checkPinNum();
+        counter ++
+    } else if (counter === "deposit" && action === "enter") {
+        user1.userCheckBalance += Number(document.getElementById("depositMoney").value);
+        depositFunction();
+    } else if (action === "cancel") {
+        counter = "home"
+        checkPinNum();
+    }
 }
 function cardPad(element) {
    if (counter == 0) {
        document.getElementById("cardNumber").value = document.getElementById("cardNumber").value + element.value;
-       
    } else if (counter == 1) {
        document.getElementById("pinNumber").value = document.getElementById("pinNumber").value + element.value;
    } else if (counter == "deposit") {
@@ -38,35 +53,60 @@ function checkCardNum() {
 }
 
 function checkPinNum() {
-   if (counter == 2) {
-       pinCheck = document.getElementById("pinNumber").value;
-       if (pinCheck !== user1.pinNum) {
-           document.getElementById("pinText").innerHTML = "Error: Your pin number is incorrect.";
-       } else {
-           document.getElementById("display").innerHTML = "Choose an option";
-           pinText.style.display = "none";
-           pinNumber.style.display = "none";
-           fastCash.style.display = "inline-block";
-           checkAccount.style.display = "inline-block";
-           deposit.style.display = "inline-block";
-       }
-   }
-}  
+    pinCheck = document.getElementById("pinNumber").value;
+    if (pinCheck !== user1.pinNum) {
+        document.getElementById("pinText").innerHTML = "Error: Your pin number is incorrect.";
+    } else if (counter === "home" && activeUser == true) {
+        document.getElementById("display3").innerHTML = '';
+        depositMoney.style.display = "none";
+        twenty.style.display = "none";
+        forty.style.display = "none";
+       sixty.style.display = "none";
+       eighty.style.display = "none";
+        document.getElementById("display").innerHTML = "Choose an option";
+        document.getElementById("display").style.display = "block";
+        pinText.style.display = "none";
+        pinNumber.style.display = "none";
+        fastCash.style.display = "inline-block";
+        checkAccount.style.display = "inline-block";
+        deposit.style.display = "inline-block";
+        buttonOne.onclick = function() {fastCashFunction()};
+        buttonTwo.onclick = function() {depositFunction()};
+        buttonThree.onclick = function() {checkAccountFunction()};
+    } else {
+        document.getElementById("display").innerHTML = "Choose an option";
+        pinText.style.display = "none";
+        pinNumber.style.display = "none";
+        fastCash.style.display = "inline-block";
+        checkAccount.style.display = "inline-block";
+        deposit.style.display = "inline-block";
+        buttonOne.onclick = function() {fastCashFunction()};
+        buttonTwo.onclick = function() {depositFunction()};
+        buttonThree.onclick = function() {checkAccountFunction()};
+        activeUser = true;
+    }
+}
 
 function fastCashFunction() {  
-   document.getElementById("display").innerHTML = "Your account balance is " + user1.userBalance + " ! Choose an option to widthdraw from your account.";
-   twenty.style.display = "inline-block";
-   forty.style.display = "inline-block";
+    document.getElementById("display").innerHTML = "Your account balance is " + user1.userBalance + " ! Choose an option to widthdraw from your account.";
+    twenty.style.display = "inline-block";
+    forty.style.display = "inline-block";
    sixty.style.display = "inline-block";
    eighty.style.display = "inline-block";
    fastCash.style.display = "none";
    checkAccount.style.display = "none";
    deposit.style.display = "none";
+   buttonOne.onclick = null;
+   buttonTwo.onclick = null;
+   buttonThree.onclick = null;
+   buttonOne.onclick = function() {twentyFunction()};
+   buttonTwo.onclick = function() {fortyFunction()};
+   buttonThree.onclick = function() {sixtyFunction()};
+   buttonFour.onclick = function() {eightyFunction()};
 }
 function twentyFunction() {
    document.getElementById("display3").innerHTML = "Your checking account balance is " + user1.userCheckBalance + " ! Choose an option to widthdraw from your account.";
    user1.userCheckBalance = user1.userCheckBalance - 20;
-   depositMoney.style.display = "block";
    display.style.display = "none";
 }
 
