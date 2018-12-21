@@ -4,11 +4,11 @@ var user1 = {
     pinNum: "1234",
     userName: "Z"
 }
+var counter = 0
 var buttonOne = document.getElementById("buttonOne");
 var buttonTwo = document.getElementById("buttonTwo");
 var buttonThree = document.getElementById("buttonThree");
 var buttonFour = document.getElementById("buttonFour");
-var counter = 0
 var depositMoney = document.getElementById("depositMoney");
 var activeUser = false;
 
@@ -31,9 +31,9 @@ function processing(action) {
 function cardPad(element) {
    if (counter == 0) {
        document.getElementById("cardNumber").value = document.getElementById("cardNumber").value + element.value;
-   } else if (counter == 1) {
+   } else if (counter === 1) {
        document.getElementById("pinNumber").value = document.getElementById("pinNumber").value + element.value;
-   } else if (counter == "deposit") {
+   } else if (counter === "deposit") {
        user1.userCheckBalance += document.getElementById("depositMoney").value;
        console.log("Caught")
        counter = 1
